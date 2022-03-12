@@ -80,9 +80,9 @@ public class CustomerController {
 	@RequestMapping("/search")
 	public String searchCustomers(@ModelAttribute("customer") Customer cust, Model model) {
 		if (cust.getFirstName().trim().isEmpty() && cust.getLastName().trim().isEmpty()
-				&& cust.getEmail().trim().isEmpty())
+				&& cust.getEmail().trim().isEmpty()) {
 			return "redirect:/customers/list";
-		else {
+		} else {
 			List<Customer> customers = customerService.searchCustomerInDB(cust);
 			model.addAttribute("customers", customers);
 			return "customer-list";
