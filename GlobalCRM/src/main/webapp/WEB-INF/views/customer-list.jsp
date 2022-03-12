@@ -22,8 +22,6 @@ function clearSearch(){
 	var inputs = document.getElementsByTagName('input')
 	for(var i=0;i<inputs.length;i++)
         inputs[i].value = '';
-	document.querySelector('.clear-search').addEventListener("click", function(event){
-		  event.preventDefault();})
 }
 </script>
 
