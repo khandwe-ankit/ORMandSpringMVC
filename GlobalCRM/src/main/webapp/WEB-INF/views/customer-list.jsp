@@ -16,6 +16,17 @@
 	crossorigin="anonymous">
 
 <title>Customer Directory</title>
+
+<script>
+function clearSearch(){
+	var inputs = document.getElementsByTagName('input')
+	for(var i=0;i<inputs.length;i++)
+        inputs[i].value = '';
+	document.querySelector('.clear-search').addEventListener("click", function(event){
+		  event.preventDefault();})
+}
+</script>
+
 </head>
 
 <body>
@@ -33,12 +44,15 @@
 			<a href="/GlobalCRM/customers/add"
 				class="btn btn-primary btn-sm mb-3"> Add Customer </a> 
 				<input type="search" name="firstName" placeholder="First Name"
-				class="form-control-sm ml-5 mr-2 mb-3" /> 
-				<input type="search" name="lastName" placeholder="Last Name" 
-				class="form-control-sm mr-2 mb-3" />
+				value="${ searchedCustData.firstName}"
+				class="form-control-sm ml-5 mr-2 mb-3 input" /> 
+				<input type="search" name="lastName" placeholder="Last Name"
+				value="${ searchedCustData.lastName}"
+				class="form-control-sm mr-2 mb-3 input" /> 
 				<input type="search" name="email" placeholder="Email" 
-				class="form-control-sm mr-2 mb-3" />
-
+				value="${ searchedCustData.email}"
+				class="form-control-sm mr-2 mb-3 input" />
+			<button style="display: block;" class="btn btn-primary btn-sm mb-3 mr-1 clear-search" onclick=clearSearch()>Clear</button>
 			<button type="submit" class="btn btn-success btn-sm mb-3">Search</button>
 
 		</form>

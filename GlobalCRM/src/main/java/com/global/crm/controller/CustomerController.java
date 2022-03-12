@@ -84,6 +84,7 @@ public class CustomerController {
 			return "redirect:/customers/list";
 		} else {
 			List<Customer> customers = customerService.searchCustomerInDB(cust);
+			model.addAttribute("searchedCustData", cust);
 			model.addAttribute("customers", customers);
 			return "customer-list";
 		}
