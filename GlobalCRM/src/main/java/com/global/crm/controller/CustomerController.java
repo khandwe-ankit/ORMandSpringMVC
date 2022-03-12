@@ -1,4 +1,4 @@
-package com.global.crm.service;
+package com.global.crm.controller;
 
 import java.util.List;
 
@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.global.crm.model.Customer;
+import com.global.crm.service.CustomerService;
 
 @Controller
 @RequestMapping("/customers")
