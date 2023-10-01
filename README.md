@@ -1,1 +1,1 @@
-# Ankit-Kumar-Khandwe-ORMandSpringMVCAssignmentSolution
+# Ankit-Kumar-Khandwe-ORMandSpringMVC
